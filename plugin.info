@@ -1,0 +1,13 @@
+{
+  "title": "$:/plugins/D&DTools/CreatureManager",
+  "author": "Matt Lauber",
+  "created": "2018-12-17T14:28:48.203Z",
+  "description": "D&D Creature Manager",
+  "list": [
+    "readme"
+  ],
+  "modified": "2018-12-17T19:06:41.385Z",
+  "plugin-priority": "1",
+  "plugin-type": "plugin",
+  "version": "1.0.8"
+}

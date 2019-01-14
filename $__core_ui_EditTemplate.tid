@@ -1,0 +1,21 @@
+created: 20190107162350576
+modified: 20190107181915597
+title: $:/core/ui/EditTemplate
+
+\define actions()
+<$action-sendmessage $message="tm-add-tag" $param={{$:/temp/NewTagName}}/>
+<$action-deletetiddler $tiddler="$:/temp/NewTagName"/>
+<$action-sendmessage $message="tm-add-field" $name={{$:/temp/newfieldname}} $value={{$:/temp/newfieldvalue}}/>
+<$action-deletetiddler $tiddler="$:/temp/newfieldname"/>
+<$action-deletetiddler $tiddler="$:/temp/newfieldvalue"/>
+<$action-sendmessage $message="tm-save-tiddler"/>
+\end
+\define frame-classes()
+tc-tiddler-frame tc-tiddler-edit-frame $(missingTiddlerClass)$ $(shadowTiddlerClass)$ $(systemTiddlerClass)$
+\end
+
+<$list filter="[all[current]get[type]addprefix[$:/core/ui/EditTemplate/]] [[$:/core/ui/EditTemplate/default]] +[first[]]" variable="type">
+
+<$transclude tiddler=<<type>>><$transclude tiddler="$:/core/ui/EditTemplate/default"></$transclude>
+
+</$list>

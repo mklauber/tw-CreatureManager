@@ -1,0 +1,28 @@
+created: 20170920212215536
+modified: 20171101195300823
+tags: 
+title: $:/core/ui/EditTemplate/Creature
+
+<div class=<<frame-classes>>>
+<$fieldmangler>
+<$set name="storyTiddler" value=<<currentTiddler>>>
+<$keyboard key="((cancel-edit-tiddler))" message="tm-cancel-tiddler">
+<$keyboard key="((save-tiddler))" actions=<<actions>>>
+<$list filter="
+$:/core/ui/EditTemplate/controls
+$:/core/ui/EditTemplate/title
+$:/core/ui/EditTemplate/tags
+$:/plugins/D&DTools/CreatureManager/EditTemplate
+$:/plugins/D&DTools/CreatureManager/StatBlockTemplate
+$:/core/ui/EditTemplate/body/editor
+$:/core/ui/EditTemplate/type
+$:/plugins/D&DTools/CreatureManager/EditTemplate/fields
+
+" variable="listItem">
+<$transclude tiddler=<<listItem>>/>
+</$list>
+</$keyboard>
+</$keyboard>
+</$set>
+</$fieldmangler>
+</div>
