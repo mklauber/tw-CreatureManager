@@ -9,5 +9,8 @@
   "modified": "2018-12-17T19:06:41.385Z",
   "plugin-priority": "1",
   "plugin-type": "plugin",
-  "version": "1.0.8"
+  "version": "1.0.8",
+  "tags": "[[D&D]]",
+  "summary": "D&D 5e Creature Stat Block Templates"
+
 }
