@@ -2,6 +2,7 @@
   "title": "$:/plugins/D&DTools/CreatureManager",
   "author": "Matt Lauber",
   "created": "2018-12-17T14:28:48.203Z",
+	"core-version": ">=5.1.22",
   "description": "D&D Creature Manager",
   "list": [
     "readme"
@@ -9,8 +10,9 @@
   "modified": "2018-12-17T19:06:41.385Z",
   "plugin-priority": "1",
   "plugin-type": "plugin",
-  "version": "1.0.8",
+  "version": "1.22.0",
   "tags": "[[D&D]]",
+  "source": "https://github.com/mklauber/tw-CreatureManager",
   "summary": "D&D 5e Creature Stat Block Templates"
 
 }

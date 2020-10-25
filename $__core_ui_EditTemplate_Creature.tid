@@ -3,8 +3,9 @@ modified: 20171101195300823
 tags: 
 title: $:/core/ui/EditTemplate/Creature
 
-<div class=<<frame-classes>>>
+<div data-tiddler-title=<<currentTiddler>> data-tags={{!!tags}} class=<<frame-classes>> >
 <$fieldmangler>
+<$vars storyTiddler=<<currentTiddler>> newTagNameTiddler=<<qualify "$:/temp/NewTagName">> newFieldNameTiddler=<<qualify "$:/temp/NewFieldName">> newFieldValueTiddler=<<qualify "$:/temp/NewFieldValue">>>
 <$set name="storyTiddler" value=<<currentTiddler>>>
 <$keyboard key="((cancel-edit-tiddler))" message="tm-cancel-tiddler">
 <$keyboard key="((save-tiddler))" actions=<<actions>>>
@@ -19,7 +20,9 @@ $:/core/ui/EditTemplate/type
 $:/plugins/D&DTools/CreatureManager/EditTemplate/fields
 
 " variable="listItem">
+<$set name="tv-config-toolbar-class" filter="[<tv-config-toolbar-class>] [<listItem>encodeuricomponent[]addprefix[tc-btn-]]">
 <$transclude tiddler=<<listItem>>/>
+</$set>
 </$list>
 </$keyboard>
 </$keyboard>
