@@ -10,7 +10,7 @@
   "modified": "2018-12-17T19:06:41.385Z",
   "plugin-priority": "1",
   "plugin-type": "plugin",
-  "version": "1.23.0",
+  "version": "1.24.0",
   "tags": "[[D&D]]",
   "source": "https://github.com/mklauber/tw-CreatureManager",
   "summary": "D&D 5e Creature Stat Block Templates"

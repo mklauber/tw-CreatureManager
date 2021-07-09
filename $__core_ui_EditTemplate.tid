@@ -1,7 +1,18 @@
 created: 20190107162350576
-modified: 20190107181915597
+modified: 20210708122739647
 title: $:/core/ui/EditTemplate
 
+\define delete-edittemplate-state-tiddlers() <$action-deletetiddler $filter="[<newFieldNameTiddler>] [<newFieldValueTiddler>] [<newFieldNameInputTiddler>] [<newFieldNameSelectionTiddler>] [<newTagNameTiddler>] [<newTagNameInputTiddler>] [<newTagNameSelectionTiddler>] [<typeInputTiddler>] [<typeSelectionTiddler>]"/>
+\define save-tiddler-actions()
+<$action-sendmessage $message="tm-add-tag" $param={{{ [<newTagNameTiddler>get[text]] }}}/>
+<$action-sendmessage $message="tm-add-field" $name={{{ [<newFieldNameTiddler>get[text]] }}} $value={{{ [<newFieldValueTiddler>get[text]] }}}/>
+<<delete-edittemplate-state-tiddlers>>
+<$action-sendmessage $message="tm-save-tiddler"/>
+\end
+\define cancel-delete-tiddler-actions(message)
+<<delete-edittemplate-state-tiddlers>>
+<$action-sendmessage $message="tm-$message$-tiddler"/>
+\end
 \define save-tiddler-actions()
 <$action-sendmessage $message="tm-add-tag" $param={{{ [<newTagNameTiddler>get[text]] }}}/>
 <$action-deletetiddler $tiddler=<<newTagNameTiddler>>/>
